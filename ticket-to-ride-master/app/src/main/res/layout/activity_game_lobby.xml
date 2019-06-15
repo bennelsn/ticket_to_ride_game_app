@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_background"
+    android:orientation="vertical"
+    tools:context="view.GameLobbyActivity">
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:alpha=".8"
+        android:background="@android:color/background_light"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/current_players"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Players"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_weight="0.24">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/chat_text"
+                android:layout_width="650dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Chat? Who said the chat worked?"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/send_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@mipmap/send" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/start_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:text="Start Game" />
+    </LinearLayout>
+
+</LinearLayout>

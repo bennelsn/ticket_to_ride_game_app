@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mapBackground"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context="view.GameActivity">
+
+    <ImageView
+        android:id="@+id/map_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@mipmap/ticket_to_ride_map_with_routes" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dallas"
+        android:layout_alignEnd="@+id/PickTrainColorTextView"
+        android:orientation="vertical"
+        android:id="@+id/relativeLayout2">
+
+        <ImageView
+            android:id="@+id/player_red_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/player_green_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/player_red_train_card"
+            android:layout_below="@+id/player_red_train_card"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/green" />
+
+        <ImageView
+            android:id="@+id/player_white_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/player_green_train_card"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/player_red_train_card"
+            app:srcCompat="@drawable/white" />
+
+        <ImageView
+            android:id="@+id/player_orange_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/player_white_train_card"
+            app:srcCompat="@drawable/orange" />
+
+        <ImageView
+            android:id="@+id/player_blue_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/player_orange_train_card"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/player_black_train_card"
+            app:srcCompat="@drawable/blue" />
+
+        <ImageView
+            android:id="@+id/player_black_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/player_green_train_card"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/player_red_train_card"
+            app:srcCompat="@drawable/black" />
+
+        <ImageView
+            android:id="@+id/player_yellow_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/player_green_train_card"
+            android:layout_below="@+id/player_green_train_card"
+            app:srcCompat="@drawable/yellow" />
+
+        <ImageView
+            android:id="@+id/player_pink_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/player_blue_train_card"
+            android:layout_toEndOf="@+id/player_rainbow_train_card"
+            app:srcCompat="@drawable/pink" />
+
+        <ImageView
+            android:id="@+id/player_rainbow_train_card"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/player_black_train_card"
+            android:layout_below="@+id/player_black_train_card"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/rainbow" />
+
+        <TextView
+            android:id="@+id/red_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="46dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/white_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="46dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/orange_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="363dp"
+            android:layout_marginTop="46dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/green_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="125dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/black_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="125dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/blue_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="363dp"
+            android:layout_marginTop="125dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/yellow_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="210dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/rainbow_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="210dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/pink_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="210dp"
+            android:background="@android:color/black"
+            android:padding="1dp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/draw_trains"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Draw Trains"
+        tools:text="Draw Trains" />
+
+    <Button
+        android:id="@+id/claim_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/draw_trains"
+        android:text="Claim Route" />
+
+    <Button
+        android:id="@+id/draw_destinations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/claim_route"
+        android:text="Draw Destinations" />
+
+    <Button
+        android:id="@+id/my_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/chats_stats"
+        android:text="My Game" />
+
+    <Button
+        android:id="@+id/chats_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Chats/Stats" />
+
+    <Button
+        android:id="@+id/portland"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="61dp"
+        android:alpha="0"
+        android:text="portland" />
+
+    <Button
+        android:id="@+id/seattle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:alpha="0"
+        android:text="seattle" />
+
+    <Button
+        android:id="@+id/vancouver"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="0dp"
+        android:alpha="0"
+        android:text="vancouver" />
+
+    <Button
+        android:id="@+id/san_francisco"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="187dp"
+        android:alpha="0"
+        android:text="san_francisco" />
+
+    <Button
+        android:id="@+id/los_angeles"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="260dp"
+        android:alpha="0"
+        android:text="los_angeles" />
+
+    <Button
+        android:id="@+id/calgary"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="0dp"
+        android:alpha="0"
+        android:text="calgary" />
+
+    <Button
+        android:id="@+id/helena"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="207dp"
+        android:layout_marginTop="90dp"
+        android:alpha="0"
+        android:text="helena" />
+
+    <Button
+        android:id="@+id/salt_lake_city"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="160dp"
+        android:alpha="0"
+        android:text="salt_lake_city" />
+
+    <Button
+        android:id="@+id/las_vegas"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="230dp"
+        android:alpha="0"
+        android:text="las_vegas" />
+
+    <Button
+        android:id="@+id/phoenix"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="270dp"
+        android:alpha="0"
+        android:text="phoenix" />
+
+    <Button
+        android:id="@+id/santa_fe"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="250dp"
+        android:alpha="0"
+        android:text="santa_fe" />
+
+    <Button
+        android:id="@+id/el_paso"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="302dp"
+        android:alpha="0"
+        android:text="el_paso" />
+
+    <Button
+        android:id="@+id/denver"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="190dp"
+        android:alpha="0"
+        android:text="denver" />
+
+    <Button
+        android:id="@+id/winnipeg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="332dp"
+        android:layout_marginTop="25dp"
+        android:alpha="0"
+        android:text="winnipeg" />
+
+    <Button
+        android:id="@+id/duluth"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="385dp"
+        android:layout_marginTop="115dp"
+        android:alpha="0"
+        android:text="duluth" />
+
+    <Button
+        android:id="@+id/omaha"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="353dp"
+        android:layout_marginTop="159dp"
+        android:alpha="0"
+        android:text="omaha" />
+
+    <Button
+        android:id="@+id/kansas_city"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="355dp"
+        android:layout_marginTop="200dp"
+        android:alpha="0"
+        android:text="kansas_city" />
+
+    <Button
+        android:id="@+id/oklahoma_city"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="247dp"
+        android:alpha="0"
+        android:text="oklahoma_city" />
+
+    <Button
+        android:id="@+id/dallas"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="357dp"
+        android:layout_marginTop="317dp"
+        android:alpha="0"
+        android:text="dallas" />
+
+    <Button
+        android:id="@+id/houston"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="345dp"
+        android:alpha="0"
+        android:text="houston" />
+
+    <Button
+        android:id="@+id/new_orleans"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="425dp"
+        android:layout_marginTop="345dp"
+        android:alpha="0"
+        android:text="new_orleans" />
+
+    <Button
+        android:id="@+id/little_rock"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="392dp"
+        android:layout_marginTop="260dp"
+        android:alpha="0"
+        android:text="little_rock" />
+
+    <Button
+        android:id="@+id/st_louis"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="410dp"
+        android:layout_marginTop="205dp"
+        android:alpha="0"
+        android:text="st_louis" />
+
+    <Button
+        android:id="@+id/chicago"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="458dp"
+        android:layout_marginTop="162dp"
+        android:alpha="0"
+        android:text="chicago" />
+
+    <Button
+        android:id="@+id/saul_st_marie"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="475dp"
+        android:layout_marginTop="80dp"
+        android:alpha="0"
+        android:text="saul_st_marie" />
+
+    <Button
+        android:id="@+id/nashville"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="475dp"
+        android:layout_marginTop="240dp"
+        android:alpha="0"
+        android:text="nashville" />
+
+    <Button
+        android:id="@+id/atlanta"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="500dp"
+        android:layout_marginTop="270dp"
+        android:alpha="0"
+        android:text="atlanta" />
+
+    <Button
+        android:id="@+id/charleston"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="558dp"
+        android:layout_marginTop="282dp"
+        android:alpha="0"
+        android:text="charleston" />
+
+    <Button
+        android:id="@+id/raleigh"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="542dp"
+        android:layout_marginTop="236dp"
+        android:alpha="0"
+        android:text="raleigh" />
+
+    <Button
+        android:id="@+id/pittsburgh"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="542dp"
+        android:layout_marginTop="160dp"
+        android:alpha="0"
+        android:text="pittsburgh" />
+
+    <Button
+        android:id="@+id/toronto"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="541dp"
+        android:layout_marginTop="100dp"
+        android:alpha="0"
+        android:text="toronto" />
+
+    <Button
+        android:id="@+id/montreal"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="618dp"
+        android:layout_marginTop="37dp"
+        android:alpha="0"
+        android:text="montreal" />
+
+    <Button
+        android:id="@+id/boston"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="634dp"
+        android:layout_marginTop="97dp"
+        android:alpha="0"
+        android:text="boston" />
+
+    <Button
+        android:id="@+id/new_york"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="606dp"
+        android:layout_marginTop="142dp"
+        android:alpha="0"
+        android:text="new_york" />
+
+    <Button
+        android:id="@+id/washington"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="576dp"
+        android:layout_marginTop="201dp"
+        android:alpha="0"
+        android:text="washington" />
+
+    <Button
+        android:id="@+id/miami"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/map_image"
+        android:layout_alignEnd="@+id/map_image"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="130dp"
+        android:alpha="0"
+        android:text="miami" />
+
+    <TextView
+        android:id="@+id/PickTrainColorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/chats_stats"
+        android:layout_alignTop="@+id/saul_st_marie"
+        android:layout_marginEnd="28dp"
+        android:text="Pick Your Cards To Use" />
+
+    <Button
+        android:id="@+id/display_card_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/PickTrainColorTextView"
+        android:layout_alignTop="@+id/winnipeg"
+        android:text="Select Cards" />
+
+    <Button
+        android:id="@+id/confirm_claim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:layout_below="@+id/relativeLayout2"
+        android:text="Confirm" />
+
+    <Button
+        android:id="@+id/end_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/my_game"
+        android:layout_toStartOf="@+id/my_game"
+        android:text="I'm tired of playing" />
+
+</RelativeLayout>
